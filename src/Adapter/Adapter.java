@@ -2,44 +2,35 @@ package Adapter;
 public class Adapter {
     // Interfaz esperada
 
-    public interface EnchufeEuropeo {
-        void conectarEnchufeEuropeo();
+    public interface EnchufeAmericano {
+        void conectarEnchufeAmericano();
 
     }
 
     // Clase incompatible
-    public class EnchufeAmericano {
-        public void conectarEnchufeAmericano() {
-            System.out.println("Conectando enchufe americano");
+    public class EnchufeEuropeo {
+        public void conectarEnchufeEuropeo() {
+            System.out.println("Conectando enchufe europeo");
         }
     }
 
     // Adaptador
-    public class EnchufeAdapter implements EnchufeEuropeo {
-        private EnchufeAmericano enchufeAmericano;
+    public class AdaptadorEnchufe implements EnchufeAmericano {
+        private EnchufeEuropeo enchufeEuropeo;
 
-        public EnchufeAdapter(EnchufeAmericano enchufeAmericano) {
-            this.enchufeAmericano = enchufeAmericano;
+        public AdaptadorEnchufe(EnchufeEuropeo enchufeEuropeo) {
+            this.enchufeEuropeo = enchufeEuropeo;
         }
 
         @Override
-        public void conectarEnchufeEuropeo() {
-            enchufeAmericano.conectarEnchufeAmericano();
+        public void conectarEnchufeAmericano() {
+            enchufeEuropeo.conectarEnchufeEuropeo();
         }
-    }
+    }    public static void main(String[] args) {
+        EnchufeEuropeo enchufeEuropeo = new Adapter().new EnchufeEuropeo();
+        EnchufeAmericano adaptador = new Adapter().new AdaptadorEnchufe(enchufeEuropeo);
 
-     public static void main(String[] args) {
-        // Crear una instancia del enchufe americano
-        Adapter.EnchufeAmericano enchufeAmericano = new Adapter().new EnchufeAmericano();
-
-        // Crear el adaptador para que el enchufe americano pueda ser usado como europeo
-        Adapter.EnchufeEuropeo enchufeEuropeo = new Adapter().new EnchufeAdapter(enchufeAmericano);
-
-        // Usar el enchufe europeo (que en realidad es un enchufe americano adaptado)
-        enchufeEuropeo.conectarEnchufeEuropeo();
-    }
+        adaptador.conectarEnchufeAmericano();
+    } 
+    
 }
-
-
-
-
