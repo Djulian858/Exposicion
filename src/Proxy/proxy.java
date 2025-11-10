@@ -13,7 +13,7 @@ public class proxy {
         private String datosSensibles;
         
         public BaseDeDatosReal() {
-            this.datosSensibles = " \nDATOS SUPER SECRETOS: 123-456-789";
+            this.datosSensibles = " \nDATOS SUPER SECRETOS: 123-456-789\n";
             System.out.println(" \nCARGANDO base de datos real ... (Operación Exitosa!!!)");
         }
         
