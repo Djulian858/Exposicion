@@ -23,9 +23,6 @@ public class Adapter {
         }
     }
 
-    // =============================
-    // 3️⃣ ADAPTADOR (Adapter)
-    // =============================
     // Esta clase adapta el enchufe europeo para que funcione
     // como un enchufe americano.
     class AdaptadorEnchufe implements EnchufeAmericano {
