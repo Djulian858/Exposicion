@@ -87,17 +87,17 @@ class Flyweight {
         // ESTADISTICAS
         System.out.println("\n" + "=".repeat(40));
         System.out.println("RESUMEN DEL AHORRO DE MEMORIA:");
-        System.out.println("• Caracteres unicos en el texto: " + FabricaCaracteres.getTotalCaracteres());
-        System.out.println("• Total de posiciones en el documento: " + texto.length());
-        System.out.println("• MEMORIA AHORRADA: En lugar de " + texto.length() + " objetos,");
-        System.out.println("  solo tenemos " + FabricaCaracteres.getTotalCaracteres() + " objetos en memoria!");
+        System.out.println("\n- Caracteres unicos en el texto: " + FabricaCaracteres.getTotalCaracteres());
+        System.out.println("\n- Total de posiciones en el documento: " + texto.length());
+        System.out.println("\n- MEMORIA AHORRADA: En lugar de " + texto.length() + " objetos,"+
+        " solo tenemos " + FabricaCaracteres.getTotalCaracteres() + " objetos en memoria!");
+      
         
         // EJEMPLO VISUAL
         System.out.println("\nEJEMPLO VISUAL PARA LA EXPOSICION:");
-        System.out.println("Texto: H O L A   M U N D O");
-        System.out.println("Flyweights: H O L A   M U N D O");
-        System.out.println("           ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑");
-        System.out.println("           1 2 3 4 5 6 7 8 9 10 -> Posiciones (extrinseco)");
+        System.out.println("\nTexto: H O L A   M U N D O");
+        System.out.println("\nFlyweights: H O L A   M U N D O");
+        System.out.println("            1 2 3 4   5 6 7 8 2 -> Posiciones");
         System.out.println("           Mismos objetos reutilizados");
     }
 }
