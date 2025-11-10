@@ -31,7 +31,7 @@ public class proxy {
         @Override
         public void acceder(String usuario) {
             intentosAcceso++;
-            System.out.println("\n--- Intento de acceso #" + intentosAcceso + " ---");
+            System.out.println("\n--- Intento de acceso #" + intentosAcceso + " ---\n");
             
             // 1️⃣ CONTROL DE ACCESO
             if (!usuario.equals("admin")) {
