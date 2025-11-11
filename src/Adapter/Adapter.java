@@ -4,7 +4,7 @@ package Adapter;
 public class Adapter {
 
   
-    // Esta es la interfaz que el cliente espera usar.
+    // Esta es la interfaz que se espera usar.
     interface EnchufeAmericano {
         void conectarEnchufeAmericano();
         double obtenerVoltaje();
@@ -51,7 +51,7 @@ public class Adapter {
     }
 
    
-    // El cliente trabaja solo con la interfaz americana.
+    // Se trabaja solo con la interfaz americana.
     public static void main(String[] args) {
         Adapter demo = new Adapter();
 
